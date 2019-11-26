@@ -4,16 +4,14 @@ function [cum_h,t_h] = cumHistogram(in,t)
 % otherwise, the sample points can be specified with the input (non-linear 
 % sampling is possible).
 if length(t) > 1
-    N = length(t);
-    cum_h = zeros(length(N),1);
+    cum_h = zeros(length(t), 1);
     t_h = t(:);
 else
-    N = t+1;
-    cum_h = zeros(N,1);
-    t_h = linspace(min(in(:)),max(in(:)),N)';
+    cum_h = zeros(t + 1, 1);
+    t_h = linspace(min(in(:)), max(in(:)), t + 1)';
 end
 
-for ii = 1:N
+for ii = 1:length(t_h)
     cum_h(ii) = nnz(in <= t_h(ii));
 end
 cum_h = cum_h/max(cum_h(:));
