@@ -1,4 +1,4 @@
-function [out,x_edges,y_edges,x_centers,y_centers] = binscatter2(x,y,weight,x_res,y_res,bounds)
+function [out,x_edges,y_edges,x_centers,y_centers] = binScatter2(x,y,weight,x_res,y_res,bounds)
 % Function binscatter2 is an alternative to MATLAB functions binscatter (which creates
 % an interactive figure) and histcounts2 (which, although it does offer specification
 % of edges manually, is not easy to use for independent x and y scales).
