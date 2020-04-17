@@ -1,5 +1,5 @@
-function x = downSample2(x,N)
-% Function downSample2 takes a 2D array x and averages four neighbors into 
+function x = antiAlias2(x,N)
+% Function antiAlias2 takes a 2D array x and averages four neighbors into 
 % a single entry.
 if ~exist('N','var') % parameter N specifies the number of times to down-sample
     N = 1;

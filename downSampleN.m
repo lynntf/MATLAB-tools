@@ -6,7 +6,7 @@ if ~exist('N','var') % parameter N specifies the dimensions of the reduction
     % N(n) specifies the reduction in dimension n
     N = 2*ones(size(size(x)));
 end
-if length(N) ~= length(size(x)) % If the reduction is jsut given as a single
+if length(N) ~= length(size(x)) % If the reduction is just given as a single
     % scalar value
     if length(N) == 1
         N = N*ones(size(size(x)));
